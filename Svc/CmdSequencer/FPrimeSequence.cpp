@@ -16,21 +16,21 @@ extern "C" {
 
 namespace Svc {
 
-  CmdSequencerComponentImpl::FPrimeSequence::CRC ::
-    CRC() :
+  CmdSequencerComponentImpl::FPrimeSequence::CRCx ::
+    CRCx() :
       m_computed(INITIAL_COMPUTED_VALUE),
       m_stored(0)
   {
 
   }
 
-  void CmdSequencerComponentImpl::FPrimeSequence::CRC ::
+  void CmdSequencerComponentImpl::FPrimeSequence::CRCx ::
     init()
   {
     this->m_computed = INITIAL_COMPUTED_VALUE;
   }
 
-  void CmdSequencerComponentImpl::FPrimeSequence::CRC ::
+  void CmdSequencerComponentImpl::FPrimeSequence::CRCx ::
     update(const BYTE* buffer, NATIVE_UINT_TYPE bufferSize)
   {
     FW_ASSERT(buffer);
@@ -39,7 +39,7 @@ namespace Svc {
     }
   }
 
-  void CmdSequencerComponentImpl::FPrimeSequence::CRC ::
+  void CmdSequencerComponentImpl::FPrimeSequence::CRCx ::
     finalize()
   {
     this->m_computed = ~this->m_computed;

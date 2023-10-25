@@ -20,7 +20,7 @@ namespace Svc {
       namespace CRCs {
 
         void serialize(Fw::SerializeBufferBase& destBuffer) {
-          CmdSequencerComponentImpl::FPrimeSequence::CRC crc;
+          CmdSequencerComponentImpl::FPrimeSequence::CRCx crc;
           crc.init();
           crc.update(destBuffer.getBuffAddr(), destBuffer.getBuffLength());
           crc.finalize();

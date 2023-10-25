@@ -44,12 +44,12 @@ namespace Svc {
         );
 
         //! Get the CRC
-        const CmdSequencerComponentImpl::FPrimeSequence::CRC& getCRC() const;
+        const CmdSequencerComponentImpl::FPrimeSequence::CRCx& getCRC() const;
 
       private:
 
         //! The CRC
-        CmdSequencerComponentImpl::FPrimeSequence::CRC crc;
+        CmdSequencerComponentImpl::FPrimeSequence::CRCx crc;
 
     };
 

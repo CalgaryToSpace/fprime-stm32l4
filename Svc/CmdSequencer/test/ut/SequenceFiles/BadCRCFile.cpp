@@ -71,7 +71,7 @@ namespace Svc {
       AMPCS::CRCs::writeCRC(this->crc.m_stored, this->getName().toChar());
     }
 
-    const CmdSequencerComponentImpl::FPrimeSequence::CRC& BadCRCFile ::
+    const CmdSequencerComponentImpl::FPrimeSequence::CRCx& BadCRCFile ::
       getCRC() const
     {
       return this->crc;

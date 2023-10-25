@@ -22,7 +22,7 @@ namespace Svc {
       namespace CRCs {
 
         //! Type alias
-        typedef CmdSequencerComponentImpl::FPrimeSequence::CRC CRC;
+        typedef CmdSequencerComponentImpl::FPrimeSequence::CRCx CRC;
 
         //! Compute a CRC
         void computeCRC(

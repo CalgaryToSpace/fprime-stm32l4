@@ -208,7 +208,7 @@ namespace Svc {
       SequenceHeader::t m_sequenceHeader;
 
       //! The CRC values
-      CmdSequencerComponentImpl::FPrimeSequence::CRC m_crc;
+      CmdSequencerComponentImpl::FPrimeSequence::CRCx m_crc;
 
       //! The CRC file
       Os::File m_crcFile;

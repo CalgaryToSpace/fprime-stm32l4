@@ -304,10 +304,16 @@ namespace Svc {
 
           //! \class CRC
           //! \brief Container for computed and stored CRC values
-          struct CRC {
+          struct CRCx {
+
+            //! Computed CRC
+            U32 m_computed;
+
+            //! Stored CRC
+            U32 m_stored;
 
             //! Construct a CRC
-            CRC();
+            CRCx();
 
             //! Initialize computed CRC
             void init();
@@ -320,12 +326,6 @@ namespace Svc {
 
             //! Finalize computed CRC
             void finalize();
-
-            //! Computed CRC
-            U32 m_computed;
-
-            //! Stored CRC
-            U32 m_stored;
 
           };
 
@@ -432,7 +432,7 @@ namespace Svc {
         PRIVATE:
 
           //! The CRC values
-          CRC m_crc;
+          CRCx m_crc;
 
           //! The sequence file
           Os::File m_sequenceFile;

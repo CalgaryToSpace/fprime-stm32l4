@@ -63,14 +63,14 @@ namespace Svc {
             Fw::SerializeBufferBase& buffer,
             const char *const fileName
         ) {
-          CRC crc;
+          CRCx crc;
           computeCRC(buffer, crc);
           writeCRC(crc.m_computed, fileName);
         }
 
         void computeCRC(
             Fw::SerializeBufferBase& buffer,
-            CRC& crc
+            CRCx& crc
         ) {
           crc.init();
           const U8 *const addr = buffer.getBuffAddr();

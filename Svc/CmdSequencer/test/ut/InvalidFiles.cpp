@@ -57,7 +57,7 @@ namespace Svc {
           Fw::CmdResponse::EXECUTION_ERROR
       );
       // Assert events
-      const CmdSequencerComponentImpl::FPrimeSequence::CRC& crc =
+      const CmdSequencerComponentImpl::FPrimeSequence::CRCx& crc =
         file.getCRC();
       ASSERT_EVENTS_SIZE(1);
       ASSERT_EVENTS_CS_FileCrcFailure(
