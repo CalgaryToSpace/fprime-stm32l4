@@ -105,7 +105,7 @@ set(CMAKE_EXE_LINKER_FLAGS ${STM32_LD})
 
 # STEP 4: Specify paths to root of toolchain package, for searching for
 #         libraries, executables, etc.
-set(CMAKE_FIND_ROOT_PATH  "${FPRIME_PROJECT_ROOT}/fprime-freertos/gcc-arm-none-eabi-10.3-2021.07/")
+set(CMAKE_FIND_ROOT_PATH  "${FPRIME_PROJECT_ROOT}/arm-toolchain")
 
 # DO NOT EDIT: F prime searches the host for programs, not the cross
 # compile toolchain
