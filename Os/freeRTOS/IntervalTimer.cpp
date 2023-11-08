@@ -8,7 +8,8 @@
  */
 #include <Os/IntervalTimer.hpp>
 #include <Fw/Types/Assert.hpp>
-#include <NucleoL4_freeRTOS/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h>
+
+#include "cmsis_os.h"
 
 namespace Os {
     void IntervalTimer::getRawTime(RawTime& time) {

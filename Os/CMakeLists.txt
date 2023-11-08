@@ -53,8 +53,14 @@ if (FPRIME_USE_POSIX)
         "${CMAKE_CURRENT_LIST_DIR}/Linux/Directory.cpp"
     )
 endif()
+
 if(${CMAKE_SYSTEM_NAME} STREQUAL "freertos")
-    message(STATUS "Detecting freeRTOS")
+  message(STATUS "Detecting freeRTOS")
+
+  include_directories(
+      "${FPRIME_PROJECT_ROOT}/NucleoL4_freeRTOS/Middlewares/Third_Party/FreeRTOS/Source/include/"
+      "${FPRIME_PROJECT_ROOT}/NucleoL4_freeRTOS/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/"
+  )
   list(APPEND SOURCE_FILES
         "${CMAKE_CURRENT_LIST_DIR}/LogPrintf.cpp"
         "${CMAKE_CURRENT_LIST_DIR}/freeRTOS/InterruptLock.cpp"
@@ -66,20 +72,12 @@ if(${CMAKE_SYSTEM_NAME} STREQUAL "freertos")
         # Non-VxWorks basic support
         "${FPRIME_FRAMEWORK_PATH}/Os/Baremetal/File.cpp"
         "${FPRIME_FRAMEWORK_PATH}/Os/Baremetal/FileSystem.cpp"
+        "${FPRIME_FRAMEWORK_PATH}/Os/Baremetal/SystemResources.cpp"
       )
-  # list(APPEND MOD_DEPS
-        # "${FPRIME_PROJECT_ROOT}/NucleoL4_freeRTOS"
-        # "${FPRIME_CURRENT_MODULE}/freeRTOS/"
-      # )
-  # set(MOD_DEPS
-  #   NucleoH7_freeRTOS/Core/Inc
-  #   NucleoH7_freeRTOS/Drivers/STM32H7xx_HAL_Driver/Inc
-  #   NucleoH7_freeRTOS/Drivers/STM32H7xx_HAL_Driver/Inc/Legacy
-  #   NucleoH7_freeRTOS/Drivers/CMSIS/Include
-  #   NucleoH7_freeRTOS/Drivers/CMSIS/Device/ST/STM32H7xx/Include
-  #   NucleoH7_freeRTOS/Middlewares/Third_Party/FreeRTOS/Source/include 
-  #   NucleoH7_freeRTOS/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2
-  #   NucleoH7_freeRTOS/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F)
+  list(APPEND MOD_DEPS
+      NucleoL4_freeRTOS
+  )
+
   # Communication Implementations
 endif()
 # Darwin IPC queue implementation

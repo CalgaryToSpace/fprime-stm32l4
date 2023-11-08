@@ -69,15 +69,11 @@ set(FPRIME_USE_POSIX OFF)
 # TODO This is tightly coupled to the project structure.  Loosen it up
 include_directories(SYSTEM
    "${CMAKE_CURRENT_LIST_DIR}/types/stm32/"
-   "${FPRIME_PROJECT_ROOT}/NucleoL4_freeRTOS/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/"
+   "${FPRIME_PROJECT_ROOT}/NucleoL4_freeRTOS/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/"
    "${FPRIME_PROJECT_ROOT}/NucleoL4_freeRTOS/Middlewares/Third_Party/FreeRTOS/Source/include/"
    "${FPRIME_PROJECT_ROOT}/NucleoL4_freeRTOS/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/"
    "${FPRIME_PROJECT_ROOT}/NucleoL4_freeRTOS/Drivers/CMSIS/Device/ST/STM32L4xx/Include/"
    "${FPRIME_PROJECT_ROOT}/NucleoL4_freeRTOS/Drivers/CMSIS/Include/"
    "${FPRIME_PROJECT_ROOT}/NucleoL4_freeRTOS/Drivers/STM32L4xx_HAL_Driver/Inc/"
-   "${FPRIME_PROJECT_ROOT}/Nucleo/Top/"
+   "${FPRIME_PROJECT_ROOT}/NucleoL4_freeRTOS/Core/Inc/"
 )
-
-# set(MOD_DEPS
-#    Os
-# )

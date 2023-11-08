@@ -1,6 +1,8 @@
 #include <Os/InterruptLock.hpp>
 #include <Os/Mutex.hpp>
-#include <NucleoL4_freeRTOS/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h>
+
+#include "cmsis_os.h"
+
 STATIC Os::Mutex intLockEmulator;
 
 namespace Os {

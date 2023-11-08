@@ -1,7 +1,8 @@
 #include <Os/Mutex.hpp>
 #include <Fw/Types/Assert.hpp>
-#include <NucleoL4_freeRTOS/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h>
-#include <NucleoL4_freeRTOS/Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h>
+
+#include "cmsis_os.h"
+#include "semphr.h"
 
 namespace Os {
     

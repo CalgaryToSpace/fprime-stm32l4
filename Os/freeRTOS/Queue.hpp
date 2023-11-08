@@ -16,8 +16,10 @@
 #include <Fw/Obj/ObjBase.hpp>
 #include <Fw/Types/Serializable.hpp>
 #include <Os/QueueString.hpp>
-#include <NucleoL4_freeRTOS/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h>
-#include <NucleoL4_freeRTOS/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h>
+
+#include "cmsis_os.h"
+#include "queue.h"
+
 namespace Os {
     // forward declaration for registry
     class QueueRegistry;

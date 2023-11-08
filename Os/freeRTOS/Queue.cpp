@@ -1,9 +1,6 @@
 #include <Fw/Types/Assert.hpp>
 #include <Os/freeRTOS/Queue.hpp>
 
-
-
-
 namespace Os {
 
     
